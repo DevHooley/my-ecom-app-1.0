@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Container from "./components/container";
+
 import Navbar from "./(CSR)/Navbar/Navbar";
 import Footer from "../app/footer";
 import SessionProvider from "./SessionProvider";

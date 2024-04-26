@@ -6,6 +6,7 @@ import getCart from "@/lib/db/cart";
 import ShoppingCartButton from "./ShoppingCartButton";
 import UserMenuButton from "./UserMenuButton";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+
 import { getServerSession } from "next-auth";
 
 async function searchProducts(formData: FormData) {
@@ -18,7 +19,7 @@ async function searchProducts(formData: FormData) {
   }
 }
 
-export default async function Navbar() {
+export default async function Navbar(props) {
   const session = await getServerSession(authOptions);
   const cart = await getCart();
 
